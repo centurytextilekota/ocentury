@@ -124,6 +124,17 @@ const AddShippingAddress = () => {
                         <Error errorName={errors.state} />
                       </div>
                       <div className="col-span-6 sm:col-span-3">
+                        <InputArea
+                          register={register}
+                          label="Landmark"
+                          name="landmark"
+                          type="text"
+                          placeholder="Input your landmark"
+                        />
+
+                        <Error errorName={errors.landmark} />
+                      </div>
+                      <div className="col-span-6 sm:col-span-3">
                         {/* <SelectOption
                           name="city"
                           label="City"

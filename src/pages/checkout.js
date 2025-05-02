@@ -199,7 +199,18 @@ const Checkout = () => {
                         />
                         <Error errorName={errors.address} />
                       </div>
-
+                      <div className="col-span-6 sm:col-span-6 lg:col-span-2">
+                        <InputArea
+                          register={register}
+                          // label={showingTranslateValue(
+                          //   storeCustomizationSetting?.checkout?.landmark
+                          // )}
+                          label="Landmark"
+                          name="landmark"
+                          type="text"
+                        />
+                        <Error errorName={errors.landmark} />
+                      </div>
                       <div className="col-span-6 sm:col-span-6 lg:col-span-2">
                         <InputArea
                           register={register}

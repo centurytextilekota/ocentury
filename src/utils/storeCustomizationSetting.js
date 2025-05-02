@@ -594,6 +594,10 @@ export const storeCustomization = {
       en: "Shipping Cost",
       de: "Versandkosten",
     },
+    landmark:{
+      en: "Landmark",
+      de: "Landmark",
+    },
     shipping_name_one: {
       en: "FedEx",
       de: "FedEx",

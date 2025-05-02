@@ -96,6 +96,7 @@ const useShippingAddressSubmit = (id) => {
       setValue("country", data.country);
       setValue("city", data.city);
       setValue("area", data.area);
+      setValue("landmark", data.landmark);
       setValue("zipCode", data.zipCode);
       setSelectedValue({
         country: data.country,

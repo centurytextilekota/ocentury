@@ -195,6 +195,7 @@ const useCheckoutSubmit = (storeSetting) => {
         state: data.state,
         city: data.city,
         zipCode: data.zipCode,
+        landmark: data.landmark,
         location: selectedLocation ?? "",
       };
 
@@ -437,6 +438,7 @@ const useCheckoutSubmit = (storeSetting) => {
       setValue("country", address.country);
       setValue("state", address.state);
       setValue("zipCode", address.zipCode);
+      setValue("landmark", address.landmark);
       console.log("address.zipCode", address.zipCode);
     } else {
       setValue("firstName");
@@ -448,6 +450,7 @@ const useCheckoutSubmit = (storeSetting) => {
       setValue("country");
       setValue("state");
       setValue("zipCode");
+      setValue("landmark");
     }
   };
   const handleCouponCode = async (e) => {
