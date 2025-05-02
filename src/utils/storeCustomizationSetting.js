@@ -389,83 +389,83 @@ export const storeCustomization = {
       en: '<h1><strong>Welcome to KachaBazar!</strong></h1>\n<p>These terms and conditions outline the rules and regulations for the use of KachaBazar\'s Website, located at https://kachabazar.com/. By accessing this website we assume you accept these terms and conditions. Do not continue to use KachaBazar if you do not agree to take all of the terms and conditions stated on this page.</p>\n<p>The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: Client, You and Your refers to you, the person log on this website and compliant to the Company’s terms and conditions. The Company, refers to our CompanyPartParties or Us refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client’s needs in respect of provision of the Company’s stated services, in accordance with and subject to, prevailing law of Netherlands. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.</p>\n<h1><strong>Cookies</strong></h1>\n<p>We employ the use of cookies. By accessing KachaBazar, you agreed to use cookies in agreement with the KachaBazar\'s Privacy Policy. Most interactive websites use cookies to let us retrieve the user’s details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.</p>\n<h1><strong>License</strong></h1>\n<p>Unless otherwise stated, KachaBazar and/or its licensors own the intellectual property rights for all material on KachaBazar. All intellectual property rights are reserved. You may access this from KachaBazar for your own personal use subjected to restrictions set in these terms and conditions.This Agreement shall begin on the date hereof. Our Terms and Conditions were created with the help of the Terms And Conditions Generator.<strong>You must not:</strong></p>\n<ul>\n<li>1. Identifiers (e.g. name, mailing address, email address, phone number, credit/debit card number)</li>\n<li>2. Characteristics of protected classifications (e.g. gender, age)</li>\n<li>3. Commercial information (e.g. products or services purchased, purchase history)</li>\n<li>4. Internet or other electronic network activity (e.g. browse or search history)</li>\n<li>5. Geo location data (e.g. latitude or longitude)</li>\n<li>6. Audio, electronic, visual, or similar information (e.g. recording of Guest service calls)</li>\n<li>7. Inferences drawn from any of the above (e.g. preferences or characteristics)</li>\n</ul>\n<p>Parts of this website offer an opportunity for users to post and exchange opinions and information in certain areas of the website. KachaBazar does not filter, edit, publish or review Comments prior to their presence on the website. Comments do not reflect the views and opinions of KachaBazar,its agents and/or affiliates. Comments reflect the views and opinions of the person who post their views and opinions. To the extent permitted by applicable laws, KachaBazar shall not be liable for the Comments or for any liability, damages or expenses caused and/or suffered as a result of any use of and/or posting of and/or appearance of the Comments on this website.</p>\n<h1><strong>Content Liability</strong></h1>\n<p>We shall not be hold responsible for any content that appears on your Website. You agree to protect and defend us against all claims that is rising on your Website. No link(s) should appear on any Website that may be interpreted as libelous, obscene or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any third party rights.Without prior approval and written permission, you may not create frames around our Webpages that alter in any way the visual presentation or appearance of our Website.</p>\n<h1><strong>Your Privacy</strong></h1>\n<p>Please read <a href="https://kachabazar-store.vercel.app/privacy-policy" target="_self">Privacy Policy</a></p>\n<h1><strong>Reservation of Rights</strong></h1>\n<p>We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amen these terms and conditions and it’s linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.</p>\n<h1><strong>Disclaimer</strong></h1>\n<p>To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website. Nothing in this disclaimer will:</p>\n<ul>\n<li>1. limit or exclude our or your liability for death or personal injury;</li>\n<li>2. limit or exclude our or your liability for fraud or fraudulent misrepresentation;</li>\n<li>3. limit any of our or your liabilities in any way that is not permitted under applicable law; or</li>\n<li>4. exclude any of our or your liabilities that may not be excluded under applicable law.</li>\n</ul>\n<p>The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer, including liabilities arising in contract, in tort and for breach of statutory duty. As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.</p>\n',
     },
   },
-  faq: {
-    page_status: true,
-    leftcol_status: true,
-    rightcol_status: true,
-    header_bg:
-      "slider/slider-1.jpg",
-    left_img:
-      "https://res.cloudinary.com/ahossain/image/upload/v1697687955/settings/faq_qr1y1h.svg",
-    title: {
-      en: "FAQs",
-      de: "Häufig gestellte Fragen",
-    },
-    faq_one: {
-      en: "How does the KachaBazar work?",
-      de: "Wie funktioniert der KachaBazar?",
-    },
-    description_one: {
-      en: "Yes. You can cancel your subscription anytime. Your subscription will continue to be active until the end of your current term (month or year) but it will not auto-renew. Unless you delete your account manually, your account and all data will be deleted 60 days from the day your subscription becomes inactive.",
-      de: "Ja. Sie können Ihr Abonnement jederzeit kündigen. Ihr Abonnement bleibt bis zum Ende Ihrer aktuellen Laufzeit (Monat oder Jahr) aktiv, verlängert sich jedoch nicht automatisch. Sofern Sie Ihr Konto nicht manuell löschen, werden Ihr Konto und alle Daten 60 Tage nach Inaktivität Ihres Abonnements gelöscht.",
-    },
-    faq_two: {
-      en: "Can I cancel my subscription anytime?",
-      de: "Kann ich mein Abonnement jederzeit kündigen?",
-    },
-    description_two: {
-      en: "Distinctively initiate error-free channels with highly efficient ROI. Intrinsicly envisioneer world-class data via best-of-breed best practices. Efficiently enable empowered e-tailers after cross-unit services. Uniquely expedite seamless e-tailers via cooperative interfaces. Monotonectally myocardinate customer directed meta-services whereas error-free scenarios.",
-      de: "Ja. Sie können Ihr Abonnement jederzeit kündigen. Ihr Abonnement bleibt bis zum Ende Ihrer aktuellen Laufzeit (Monat oder Jahr) aktiv, verlängert sich jedoch nicht automatisch. Sofern Sie Ihr Konto nicht manuell löschen, werden Ihr Konto und alle Daten 60 Tage nach Inaktivität Ihres Abonnements gelöscht.",
-    },
-    faq_three: {
-      en: "Whice payment method you should accept?",
-      de: "Welche Zahlungsmethode sollten Sie akzeptieren?",
-    },
-    description_three: {
-      en: "Holisticly engage sticky niche markets before collaborative collaboration and idea-sharing. Phosfluorescently facilitate parallel applications with unique imperatives. Proactively plagiarize functionalized deliverables via inexpensive solutions. Collaboratively embrace web-enabled infomediaries rather than diverse testing procedures.",
-      de: "Ja. Sie können Ihr Abonnement jederzeit kündigen. Ihr Abonnement bleibt bis zum Ende Ihrer aktuellen Laufzeit (Monat oder Jahr) aktiv, verlängert sich jedoch nicht automatisch. Sofern Sie Ihr Konto nicht manuell löschen, werden Ihr Konto und alle Daten 60 Tage nach Inaktivität Ihres Abonnements gelöscht.",
-    },
-    faq_four: {
-      en: "Can I cancel my subscription anytime?",
-      de: "Can I cancel my subscription anytime?",
-    },
-    description_four: {
-      en: "Continually impact seamless imperatives for best-of-breed best practices. Phosfluorescently facilitate parallel applications with unique imperatives. Proactively plagiarize functionalized deliverables via inexpensive solutions. Collaboratively embrace web-enabled infomediaries rather than diverse testing procedures.",
-      de: "Continually impact seamless imperatives for best-of-breed\nbest practices. Phosfluorescently facilitate parallel\n                      applications with unique imperatives. Proactively\n                      plagiarize functionalized deliverables via inexpensive\n                      solutions. Collaboratively embrace web-enabled\n                      infomediaries rather than diverse testing procedures.",
-    },
-    faq_five: {
-      en: "What is KachaBazar EC2 auto scaling?",
-      de: "Was ist die automatische Skalierung von KachaBazar EC2?",
-    },
-    description_five: {
-      en: "Continually impact seamless imperatives for best-of-breed best practices. Phosfluorescently facilitate parallel applications with unique imperatives. Proactively plagiarize functionalized deliverables via inexpensive solutions. Collaboratively embrace web-enabled infomediaries rather than diverse testing procedures.",
-      de: "Kontinuierliche Umsetzung nahtloser Anforderungen für Best-of-Breed-Best Practices. Phosfluoreszierend erleichtert parallele Anwendungen mit einzigartigen Anforderungen. Plagiieren Sie proaktiv funktionalisierte Ergebnisse mit kostengünstigen Lösungen. Nutzen Sie gemeinsam webbasierte Infomediaries anstelle verschiedener Testverfahren.",
-    },
-    faq_six: {
-      en: "What are the benefits of using KachaBazar affliate?",
-      de: "Welche Vorteile bietet die Nutzung eines Cloud Clever-Partners?",
-    },
-    description_six: {
-      en: "Continually impact seamless imperatives for best-of-breed best practices. Phosfluorescently facilitate parallel applications with unique imperatives. Proactively plagiarize functionalized deliverables via inexpensive solutions. Collaboratively embrace web-enabled infomediaries rather than diverse testing procedures.",
-      de: "Kontinuierliche Umsetzung nahtloser Anforderungen für Best-of-Breed-Best Practices. Phosfluoreszierend erleichtert parallele Anwendungen mit einzigartigen Anforderungen. Plagiieren Sie proaktiv funktionalisierte Ergebnisse mit kostengünstigen Lösungen. Nutzen Sie gemeinsam webbasierte Infomediaries anstelle verschiedener Testverfahren.",
-    },
-    faq_seven: {
-      en: "What is a affliates product configuration?",
-      de: "Was ist eine Affiliate-Produktkonfiguration?",
-    },
-    description_seven: {
-      en: "Yes. You can cancel your subscription anytime. Your subscription will continue to be active until the end of your current term (month or year) but it will not auto-renew. Unless you delete your account manually, your account and all data will be deleted 60 days from the day your subscription becomes inactive.",
-      de: "Ja. Sie können Ihr Abonnement jederzeit kündigen. Ihr Abonnement bleibt bis zum Ende Ihrer aktuellen Laufzeit (Monat oder Jahr) aktiv, verlängert sich jedoch nicht automatisch. Sofern Sie Ihr Konto nicht manuell löschen, werden Ihr Konto und alle Daten 60 Tage nach dem Tag, an dem Ihr Abonnement inaktiv wird, gelöscht.",
-    },
-    faq_eight: {
-      en: "What is fleet management and how is it different from dynamic scaling?",
-      de: "Was ist Flottenmanagement und wie unterscheidet es sich von dynamischer Skalierung?",
-    },
-    description_eight: {
-      en: "Distinctively initiate error-free channels with highly efficient ROI. Intrinsicly envisioneer world-class data via best-of-breed best practices. Efficiently enable empowered e-tailers after cross-unit services. Uniquely expedite seamless e-tailers via cooperative interfaces. Monotonectally myocardinate customer directed meta-services whereas error-free scenarios.",
-      de: "Initiieren Sie gezielt fehlerfreie Kanäle mit hocheffizientem ROI. Stellen Sie sich durch branchenführende Best Practices erstklassige Daten vor. Ermöglichen Sie leistungsstarken E-Händlern auf effiziente Weise die Bereitstellung abteilungsübergreifender Dienstleistungen. Beschleunigen Sie nahtlose E-Tailer auf einzigartige Weise über kooperative Schnittstellen. Monotone myokardinierte kundengesteuerte Metadienste während fehlerfreier Szenarien.",
-    },
-  },
+  // faq: {
+  //   page_status: true,
+  //   leftcol_status: true,
+  //   rightcol_status: true,
+  //   header_bg:
+  //     "slider/slider-1.jpg",
+  //   left_img:
+  //     "https://res.cloudinary.com/ahossain/image/upload/v1697687955/settings/faq_qr1y1h.svg",
+  //   title: {
+  //     en: "FAQs",
+  //     de: "Häufig gestellte Fragen",
+  //   },
+  //   faq_one: {
+  //     en: "How does the KachaBazar work?",
+  //     de: "Wie funktioniert der KachaBazar?",
+  //   },
+  //   description_one: {
+  //     en: "Yes. You can cancel your subscription anytime. Your subscription will continue to be active until the end of your current term (month or year) but it will not auto-renew. Unless you delete your account manually, your account and all data will be deleted 60 days from the day your subscription becomes inactive.",
+  //     de: "Ja. Sie können Ihr Abonnement jederzeit kündigen. Ihr Abonnement bleibt bis zum Ende Ihrer aktuellen Laufzeit (Monat oder Jahr) aktiv, verlängert sich jedoch nicht automatisch. Sofern Sie Ihr Konto nicht manuell löschen, werden Ihr Konto und alle Daten 60 Tage nach Inaktivität Ihres Abonnements gelöscht.",
+  //   },
+  //   faq_two: {
+  //     en: "Can I cancel my subscription anytime?",
+  //     de: "Kann ich mein Abonnement jederzeit kündigen?",
+  //   },
+  //   description_two: {
+  //     en: "Distinctively initiate error-free channels with highly efficient ROI. Intrinsicly envisioneer world-class data via best-of-breed best practices. Efficiently enable empowered e-tailers after cross-unit services. Uniquely expedite seamless e-tailers via cooperative interfaces. Monotonectally myocardinate customer directed meta-services whereas error-free scenarios.",
+  //     de: "Ja. Sie können Ihr Abonnement jederzeit kündigen. Ihr Abonnement bleibt bis zum Ende Ihrer aktuellen Laufzeit (Monat oder Jahr) aktiv, verlängert sich jedoch nicht automatisch. Sofern Sie Ihr Konto nicht manuell löschen, werden Ihr Konto und alle Daten 60 Tage nach Inaktivität Ihres Abonnements gelöscht.",
+  //   },
+  //   faq_three: {
+  //     en: "Whice payment method you should accept?",
+  //     de: "Welche Zahlungsmethode sollten Sie akzeptieren?",
+  //   },
+  //   description_three: {
+  //     en: "Holisticly engage sticky niche markets before collaborative collaboration and idea-sharing. Phosfluorescently facilitate parallel applications with unique imperatives. Proactively plagiarize functionalized deliverables via inexpensive solutions. Collaboratively embrace web-enabled infomediaries rather than diverse testing procedures.",
+  //     de: "Ja. Sie können Ihr Abonnement jederzeit kündigen. Ihr Abonnement bleibt bis zum Ende Ihrer aktuellen Laufzeit (Monat oder Jahr) aktiv, verlängert sich jedoch nicht automatisch. Sofern Sie Ihr Konto nicht manuell löschen, werden Ihr Konto und alle Daten 60 Tage nach Inaktivität Ihres Abonnements gelöscht.",
+  //   },
+  //   faq_four: {
+  //     en: "Can I cancel my subscription anytime?",
+  //     de: "Can I cancel my subscription anytime?",
+  //   },
+  //   description_four: {
+  //     en: "Continually impact seamless imperatives for best-of-breed best practices. Phosfluorescently facilitate parallel applications with unique imperatives. Proactively plagiarize functionalized deliverables via inexpensive solutions. Collaboratively embrace web-enabled infomediaries rather than diverse testing procedures.",
+  //     de: "Continually impact seamless imperatives for best-of-breed\nbest practices. Phosfluorescently facilitate parallel\n                      applications with unique imperatives. Proactively\n                      plagiarize functionalized deliverables via inexpensive\n                      solutions. Collaboratively embrace web-enabled\n                      infomediaries rather than diverse testing procedures.",
+  //   },
+  //   faq_five: {
+  //     en: "What is KachaBazar EC2 auto scaling?",
+  //     de: "Was ist die automatische Skalierung von KachaBazar EC2?",
+  //   },
+  //   description_five: {
+  //     en: "Continually impact seamless imperatives for best-of-breed best practices. Phosfluorescently facilitate parallel applications with unique imperatives. Proactively plagiarize functionalized deliverables via inexpensive solutions. Collaboratively embrace web-enabled infomediaries rather than diverse testing procedures.",
+  //     de: "Kontinuierliche Umsetzung nahtloser Anforderungen für Best-of-Breed-Best Practices. Phosfluoreszierend erleichtert parallele Anwendungen mit einzigartigen Anforderungen. Plagiieren Sie proaktiv funktionalisierte Ergebnisse mit kostengünstigen Lösungen. Nutzen Sie gemeinsam webbasierte Infomediaries anstelle verschiedener Testverfahren.",
+  //   },
+  //   faq_six: {
+  //     en: "What are the benefits of using KachaBazar affliate?",
+  //     de: "Welche Vorteile bietet die Nutzung eines Cloud Clever-Partners?",
+  //   },
+  //   description_six: {
+  //     en: "Continually impact seamless imperatives for best-of-breed best practices. Phosfluorescently facilitate parallel applications with unique imperatives. Proactively plagiarize functionalized deliverables via inexpensive solutions. Collaboratively embrace web-enabled infomediaries rather than diverse testing procedures.",
+  //     de: "Kontinuierliche Umsetzung nahtloser Anforderungen für Best-of-Breed-Best Practices. Phosfluoreszierend erleichtert parallele Anwendungen mit einzigartigen Anforderungen. Plagiieren Sie proaktiv funktionalisierte Ergebnisse mit kostengünstigen Lösungen. Nutzen Sie gemeinsam webbasierte Infomediaries anstelle verschiedener Testverfahren.",
+  //   },
+  //   faq_seven: {
+  //     en: "What is a affliates product configuration?",
+  //     de: "Was ist eine Affiliate-Produktkonfiguration?",
+  //   },
+  //   description_seven: {
+  //     en: "Yes. You can cancel your subscription anytime. Your subscription will continue to be active until the end of your current term (month or year) but it will not auto-renew. Unless you delete your account manually, your account and all data will be deleted 60 days from the day your subscription becomes inactive.",
+  //     de: "Ja. Sie können Ihr Abonnement jederzeit kündigen. Ihr Abonnement bleibt bis zum Ende Ihrer aktuellen Laufzeit (Monat oder Jahr) aktiv, verlängert sich jedoch nicht automatisch. Sofern Sie Ihr Konto nicht manuell löschen, werden Ihr Konto und alle Daten 60 Tage nach dem Tag, an dem Ihr Abonnement inaktiv wird, gelöscht.",
+  //   },
+  //   faq_eight: {
+  //     en: "What is fleet management and how is it different from dynamic scaling?",
+  //     de: "Was ist Flottenmanagement und wie unterscheidet es sich von dynamischer Skalierung?",
+  //   },
+  //   description_eight: {
+  //     en: "Distinctively initiate error-free channels with highly efficient ROI. Intrinsicly envisioneer world-class data via best-of-breed best practices. Efficiently enable empowered e-tailers after cross-unit services. Uniquely expedite seamless e-tailers via cooperative interfaces. Monotonectally myocardinate customer directed meta-services whereas error-free scenarios.",
+  //     de: "Initiieren Sie gezielt fehlerfreie Kanäle mit hocheffizientem ROI. Stellen Sie sich durch branchenführende Best Practices erstklassige Daten vor. Ermöglichen Sie leistungsstarken E-Händlern auf effiziente Weise die Bereitstellung abteilungsübergreifender Dienstleistungen. Beschleunigen Sie nahtlose E-Tailer auf einzigartige Weise über kooperative Schnittstellen. Monotone myokardinierte kundengesteuerte Metadienste während fehlerfreier Szenarien.",
+  //   },
+  // },
   slider: {
     left_right_arrow: false,
     bottom_dots: true,
