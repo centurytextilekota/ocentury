@@ -7,7 +7,7 @@ import OrderTable from "@components/order/OrderTable";
 import useUtilsFunction from "@hooks/useUtilsFunction";
 
 const Invoice = ({ data, printRef, globalSetting, currency }) => {
-  console.log('invoice data',data)
+  console.log("invoice data", data);
   const { getNumberTwo } = useUtilsFunction();
   // console.log("GST in invoice",data.cart[0].prices.gst)
   return (
@@ -49,9 +49,19 @@ const Invoice = ({ data, printRef, globalSetting, currency }) => {
                 />
               </Link>
             </h2>
+            <br />
             <p className="text-sm text-gray-500">
-              {globalSetting?.address ||
-                "Cecilia Chapman, 561-4535 Nulla LA, <br /> United States 96522"}
+              {globalSetting?.company_name} <br />
+              {globalSetting?.email} <br />
+              {globalSetting?.contact}
+              <br />
+              {globalSetting?.address}
+              <br />
+              {globalSetting?.city}
+              
+              {globalSetting?.state} 
+              {globalSetting?.post_code} <br />
+              {console.log("globalSetting", globalSetting)}
             </p>
           </div>
         </div>
@@ -83,9 +93,11 @@ const Invoice = ({ data, printRef, globalSetting, currency }) => {
               {data?.user_info?.email}{" "}
               <span className="ml-2">{data?.user_info?.contact}</span>
               <br />
-              {data?.user_info?.address}
+              {data.user_info?.landmark}
               <br />
-              {data.user_info?.city}, {data.user_info?.country}, {data.user_info?.zipCode}, {data.user_info?.state}
+              {data?.user_info?.address}
+              {data.user_info?.city},{data.user_info?.state},{" "}
+              {data.user_info?.country},{data.user_info?.zipCode}
             </span>
           </div>
         </div>
