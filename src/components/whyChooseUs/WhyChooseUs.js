@@ -30,7 +30,7 @@ const WhyChooseUs = () => {
                         <MdKeyboardReturn /> Easy Returns
                     </h2>
                     <p className='text-base sm:text-lg text-gray-600 sm:ml-14'>
-                        14-Day Hassle-Free Return and Exchange Policy
+                        Hassle-Free Return and Exchange Policy
                     </p>
                 </div>
 
