@@ -9,6 +9,7 @@ import { FaShoppingCart, FaUser, FaBell } from "react-icons/fa";
 import { Popover, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/outline";
 import useTranslation from "next-translate/useTranslation";
+import { FaRegUser } from "react-icons/fa";
 
 //internal import
 import { getUserSession } from "@lib/auth";
@@ -100,7 +101,7 @@ const Navbar = () => {
                   <FiShoppingCart className="w-6 h-6 " />
                 </button>
                 <button
-                  className="text-black text-2xl font-bold hidden lg:block"
+                  className="text-black text-2xl hover:cursor-pointer font-bold hidden lg:block"
                   aria-label="Login"
                 >
                   {userInfo?.image ? (
@@ -125,7 +126,7 @@ const Navbar = () => {
                     </Link>
                   ) : (
                     <Link href="/auth/login">
-                      <FaUser className="w-6 h-6 " />
+                      <FaRegUser className="w-6 h-6 " />
                     </Link>
                   )}
                 </button>
