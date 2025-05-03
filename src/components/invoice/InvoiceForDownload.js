@@ -318,7 +318,7 @@ const InvoiceForDownload = ({
               <Text style={styles.info}>{data?.user_info?.name}</Text>
               <Text style={styles.info}>
                 {" "}
-                {data?.user_info?.address?.substring(0, 25)}
+                {data?.user_info?.address?.substring(0, 25)}{" "}
               </Text>
               <Text style={styles.info}>
                 {data?.user_info?.city}, {data?.user_info?.country},{" "}

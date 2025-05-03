@@ -95,8 +95,8 @@ const Invoice = ({ data, printRef, globalSetting, currency }) => {
               <br />
               {data.user_info?.landmark}
               <br />
-              {data?.user_info?.address}
-              {data.user_info?.city},{data.user_info?.state},{" "}
+              {data?.user_info?.address},{" "}
+              {data.user_info?.city},{" "}{data.user_info?.state},{" "}
               {data.user_info?.country},{data.user_info?.zipCode}
             </span>
           </div>
