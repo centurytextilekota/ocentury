@@ -41,10 +41,10 @@ const Category = () => {
           <h2 className="font-semibold font-serif text-lg m-0 text-heading flex items-center">
             <Link href="/" className="mr-6 h-full">
               <Image
-                src="/logo/logo.png"
+                src="/logo/logo-color.png"
                 alt="logo"
-                width={110}
-                height={46}
+                width={50}
+                height={30}
                 className="object-contain"
               />
             </Link>
