@@ -103,7 +103,6 @@ const useCheckoutSubmit = (storeSetting) => {
      fetchLocationDetails();
    }, [zipCode]);
 
-
   // another way to fetch location details using zip code
   //  useEffect(() => {
   //    const fetchLocationDetails = async () => {
