@@ -90,7 +90,7 @@ const Invoice = ({ data, printRef, globalSetting, currency }) => {
             </span>
             <span className="text-sm text-gray-500 block">
               {data?.user_info?.name} <br />
-              {data?.user_info?.email}{" "}
+              {data?.user_info?.email}<br/>
               <span className="ml-2">{data?.user_info?.contact}</span>
               <br />
               {data.user_info?.landmark}
