@@ -8,6 +8,7 @@ import Layout from "@layout/Layout";
 import useGetSetting from "@hooks/useGetSetting";
 import PageHeader from "@components/header/PageHeader";
 import useUtilsFunction from "@hooks/useUtilsFunction";
+import { ChevronDownIcon } from "@heroicons/react/outline";
 
 const Faq = () => {
   const { storeCustomizationSetting } = useGetSetting();
@@ -61,7 +62,7 @@ const Faq = () => {
                     <>
                       <Disclosure.Button className="flex justify-between w-full px-4 py-3 text-base font-medium text-left text-gray-600 focus:text-emerald-500 bg-gray-50 hover:bg-emerald-50 rounded-lg focus:outline-none">
                         <span>{faq.question}</span>
-                        <ChevronUpIcon
+                        <ChevronDownIcon
                           className={`${
                             open ? "transform rotate-180 text-emerald-500" : ""
                           } w-5 h-5 text-gray-500`}
