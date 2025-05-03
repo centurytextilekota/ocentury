@@ -40,12 +40,12 @@ const Category = () => {
         <div className="w-full flex justify-between items-center h-16 px-6 py-2 bg-customPink text-white border-b border-gray-100">
           <h2 className="font-semibold font-serif text-lg m-0 text-heading flex items-center">
             <Link href="/" className="mr-6 h-full">
-              <Image
-                src="/logo/logo-color.png"
+              <img
+                src="/logo/logo.png"
                 alt="logo"
                 width={50}
                 height={30}
-                className="object-contain"
+                className="object-contain bg-white"
               />
             </Link>
           </h2>
