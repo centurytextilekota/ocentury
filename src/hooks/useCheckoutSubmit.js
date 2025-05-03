@@ -439,7 +439,7 @@ const useCheckoutSubmit = (storeSetting) => {
       setValue("state", address.state);
       setValue("zipCode", address.zipCode);
       setValue("landmark", address.landmark);
-      console.log("address.zipCode", address.zipCode);
+      // console.log("address.zipCode", address.zipCode);
     } else {
       setValue("firstName");
       setValue("lastName");
