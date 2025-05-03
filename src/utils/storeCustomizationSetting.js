@@ -515,7 +515,7 @@ export const storeCustomization = {
       de: "Jetzt einkaufen",
     },
     third_link: "/search?category=fruits-vegetable",
-    four_img: "https://i.postimg.cc/rscqZJNz/slider-1.webp",
+    four_img: "/slider/slider-1.jpg",
     four_title: {
       en: "The Best Quality Products Guaranteed!",
       de: "Die besten Qualitätsprodukte garantiert!",
@@ -530,7 +530,7 @@ export const storeCustomization = {
     },
     four_link: "/search?category=fruits-vegetable",
     five_img:
-      "https://res.cloudinary.com/ahossain/image/upload/v1697688491/settings/slider-2_o6aezc.jpg",
+      "/slider/slider-1.jpg",
     five_title: {
       en: "Best Different Type of Grocery Store",
       de: "Bestes anderes Lebensmittelgeschäft",
