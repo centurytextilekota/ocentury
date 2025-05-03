@@ -155,19 +155,6 @@ const Checkout = () => {
                         <InputArea
                           register={register}
                           label={showingTranslateValue(
-                            storeCustomizationSetting?.checkout?.email_address
-                          )}
-                          name="email"
-                          type="email"
-                          readOnly={true}
-                        />
-                        <Error errorName={errors.email} />
-                      </div>
-
-                      <div className="col-span-6 sm:col-span-3">
-                        <InputArea
-                          register={register}
-                          label={showingTranslateValue(
                             storeCustomizationSetting?.checkout?.checkout_phone
                           )}
                           name="contact"
@@ -175,6 +162,18 @@ const Checkout = () => {
                         />
 
                         <Error errorName={errors.contact} />
+                      </div>
+                      <div className="col-span-6 sm:col-span-3">
+                        <InputArea
+                          register={register}
+                          label={showingTranslateValue(
+                            storeCustomizationSetting?.checkout?.email_address
+                          )}
+                          name="email"
+                          type="email"
+                          readOnly={true}
+                        />
+                        <Error errorName={errors.email} />
                       </div>
                     </div>
                   </div>
