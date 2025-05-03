@@ -62,19 +62,6 @@ const AddShippingAddress = () => {
 
                         <Error errorName={errors.name} />
                       </div>
-
-                      <div className="col-span-6 sm:col-span-3">
-                        <InputArea
-                          register={register}
-                          label="Full Address"
-                          name="address"
-                          type="text"
-                          placeholder="Input your full address"
-                        />
-
-                        <Error errorName={errors.address} />
-                      </div>
-
                       <div className="col-span-6 sm:col-span-3">
                         <InputArea
                           register={register}
@@ -86,6 +73,7 @@ const AddShippingAddress = () => {
 
                         <Error errorName={errors.contact} />
                       </div>
+
                       <div className="col-span-6 sm:col-span-3">
                         <InputArea
                           register={register}
@@ -98,30 +86,16 @@ const AddShippingAddress = () => {
 
                         <Error errorName={errors.email} />
                       </div>
-
-                      <div className="col-span-6 sm:col-span-3">
-                        <SelectOption
-                          name="country"
-                          label="Country"
-                          //   register={register}
-                          //   required={true}
-                          //   setValue={setValue}
-                          options={countries?.map((country) => country?.name)}
-                          onChange={handleInputChange}
-                          value={selectedValue?.country}
-                        />
-                        <Error errorName={errors.country} />
-                      </div>
                       <div className="col-span-6 sm:col-span-3">
                         <InputArea
                           register={register}
-                          label="State"
-                          name="state"
+                          label="Full Address"
+                          name="address"
                           type="text"
-                          placeholder="Input your State"
+                          placeholder="Input your full address"
                         />
 
-                        <Error errorName={errors.state} />
+                        <Error errorName={errors.address} />
                       </div>
                       <div className="col-span-6 sm:col-span-3">
                         <InputArea
@@ -134,6 +108,7 @@ const AddShippingAddress = () => {
 
                         <Error errorName={errors.landmark} />
                       </div>
+
                       <div className="col-span-6 sm:col-span-3">
                         {/* <SelectOption
                           name="city"
@@ -155,8 +130,33 @@ const AddShippingAddress = () => {
                         />
                         <Error errorName={errors.city} />
                       </div>
+                      <div className="col-span-6 sm:col-span-3">
+                        <InputArea
+                          register={register}
+                          label="State"
+                          name="state"
+                          type="text"
+                          placeholder="Input your State"
+                        />
+
+                        <Error errorName={errors.state} />
+                      </div>
+                      <div className="col-span-6 sm:col-span-3">
+                        <SelectOption
+                          name="country"
+                          label="Country"
+                          //   register={register}
+                          //   required={true}
+                          //   setValue={setValue}
+                          options={countries?.map((country) => country?.name)}
+                          onChange={handleInputChange}
+                          value={selectedValue?.country}
+                        />
+                        <Error errorName={errors.country} />
+                      </div>
+
                       {/* <div className="col-span-6 sm:col-span-3"> */}
-                        {/* <SelectOption
+                      {/* <SelectOption
                           name="area"
                           label="Area"
                           options={areas?.map((area) => area)}
@@ -166,7 +166,7 @@ const AddShippingAddress = () => {
                           onChange={handleInputChange}
                           value={selectedValue?.area}
                         /> */}
-                        {/* <InputArea
+                      {/* <InputArea
                           register={register}
                           label="Area"
                           name="area"
