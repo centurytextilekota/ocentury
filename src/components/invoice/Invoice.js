@@ -103,7 +103,7 @@ const Invoice = ({ data, printRef, globalSetting, currency }) => {
               <br />
               <strong>Email:</strong> {data?.user_info?.email}
               <br />
-              <span className="">
+              <span className="ml-2">
                 <strong>Phone:</strong>
                 {data?.user_info?.contact}
               </span>
