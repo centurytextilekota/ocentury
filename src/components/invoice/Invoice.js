@@ -7,7 +7,7 @@ import OrderTable from "@components/order/OrderTable";
 import useUtilsFunction from "@hooks/useUtilsFunction";
 
 const Invoice = ({ data, printRef, globalSetting, currency }) => {
-  console.log("invoice data", data);
+  // console.log("invoice data", data);
   const { getNumberTwo } = useUtilsFunction();
   // console.log("GST in invoice",data.cart[0].prices.gst)
   return (
@@ -61,7 +61,7 @@ const Invoice = ({ data, printRef, globalSetting, currency }) => {
               
               {globalSetting?.state} 
               {globalSetting?.post_code} <br />
-              {console.log("globalSetting", globalSetting)}
+              {/* {console.log("globalSetting", globalSetting)} */}
             </p>
           </div>
         </div>
@@ -94,6 +94,7 @@ const Invoice = ({ data, printRef, globalSetting, currency }) => {
               <span className="ml-2">{data?.user_info?.contact}</span>
               <br />
               {data.user_info?.landmark}
+              {/* {console.log("user info", data.user_info)} */}
               <br />
               {data?.user_info?.address},{" "}
               {data.user_info?.city},{" "}{data.user_info?.state},{" "}

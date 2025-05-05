@@ -86,7 +86,7 @@ const useCheckoutSubmit = (storeSetting) => {
            }
            const data = await response.json();
            const place = data[0]?.PostOffice[0];
-           console.log("place", place);
+          //  console.log("place", place);
 
            // Update form fields with the fetched data
            setValue("city", place["District"], { shouldValidate: true });
@@ -184,7 +184,7 @@ const useCheckoutSubmit = (storeSetting) => {
       // Cookies.set("shippingAddress", JSON.stringify(data));
       setIsCheckoutSubmit(true);
       setError("");
-
+      // console.log("order data -> ", data);
       const userDetails = {
         name: `${data.firstName} ${data.lastName}`,
         contact: data.contact,

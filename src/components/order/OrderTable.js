@@ -7,7 +7,7 @@ const OrderTable = ({ data, currency }) => {
     <tbody className="bg-white divide-y divide-gray-100 text-serif text-sm">
       {data?.cart?.map((item, i) => (
         <tr key={i}>
-          {console.log("order table cart ->", item)}
+          {/* {console.log("order table cart ->", item)} */}
           {/* {console.log("item in map", item)} */}
           <th className="px-6 py-1 whitespace-nowrap font-normal text-gray-500 text-left">
             {i + 1}{" "}
