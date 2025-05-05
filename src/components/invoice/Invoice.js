@@ -41,28 +41,30 @@ const Invoice = ({ data, printRef, globalSetting, currency }) => {
           <div className="lg:text-right text-left">
             <h2 className="text-lg font-serif font-semibold mt-4 lg:mt-0 md:mt-0">
               <Link href="/">
-                <Image
+                <img
+                  className="inline-block"
                   width={110}
                   height={40}
-                  src="/logo/logo-color.svg"
+                  src="/logo/logo.png"
                   alt="logo"
                 />
               </Link>
             </h2>
             <br />
-            <p className="text-sm text-gray-500">
-              {globalSetting?.company_name} <br />
-              {globalSetting?.email} <br />
-              {globalSetting?.contact}
+            <div className="text-sm  text-gray-500">
+              <>{globalSetting?.company_name}</>
+              <p className="whitespace-pre-wrap lg:text-right break-words  lg:max-w-56 ml-auto">
+                {globalSetting?.address}
+                {globalSetting?.post_code}
+              </p>
+              <span></span>
+              <>Email: {globalSetting?.email}</>
               <br />
-              {globalSetting?.address}
-              <br />
-              {globalSetting?.city}
-              
-              {globalSetting?.state} 
-              {globalSetting?.post_code} <br />
-              {/* {console.log("globalSetting", globalSetting)} */}
-            </p>
+              <>Phone:{globalSetting?.contact}</>
+              <>
+                {globalSetting?.city} {globalSetting?.state}
+              </>
+            </div>
           </div>
         </div>
         <div className="flex lg:flex-row md:flex-row flex-col justify-between pt-4">
@@ -90,15 +92,22 @@ const Invoice = ({ data, printRef, globalSetting, currency }) => {
             </span>
             <span className="text-sm text-gray-500 block">
               {data?.user_info?.name} <br />
-              {data?.user_info?.email}<br/>
-              <span className="ml-2">{data?.user_info?.contact}</span>
+              {data?.user_info?.address}
               <br />
+              {data.user_info?.city}, {data.user_info?.state},{" "}
+              {data.user_info?.country},{data.user_info?.zipCode}
+              <br />
+              <strong>Landmark: </strong>
               {data.user_info?.landmark}
               {/* {console.log("user info", data.user_info)} */}
               <br />
-              {data?.user_info?.address},{" "}
-              {data.user_info?.city},{" "}{data.user_info?.state},{" "}
-              {data.user_info?.country},{data.user_info?.zipCode}
+              <strong>Email:</strong> {data?.user_info?.email}
+              <br />
+              <span className="">
+                <strong>Phone:</strong>
+                {data?.user_info?.contact}
+              </span>
+              <br />
             </span>
           </div>
         </div>

@@ -44,10 +44,22 @@ const Order = ({ params }) => {
               )}{" "}
               <span className="font-bold text-emerald-600">
                 {data?.user_info?.name},
-              </span>{" "}
-              {showingTranslateValue(
+              </span>
+              {console.log("data status", data?.status)}
+              {`Your order  ${
+                data?.status === "Pending"
+                  ? "have been successfully placed !"
+                  : data?.status === "Cancel"
+                  ? "have been Cancelled !"
+                  : data?.status === "Processing"
+                  ? "is out for delivery !"
+                  : data?.status === "Delivered"
+                  ? "have been successfully Delivered !"
+                  : data?.status
+              } `}
+              {/* {showingTranslateValue(
                 storeCustomizationSetting?.dashboard?.invoice_message_last
-              )}
+              )} */}
             </label>
           </div>
           <div className="bg-white rounded-lg shadow-sm">
