@@ -26,6 +26,19 @@ const Order = ({ params }) => {
 
   const { showingTranslateValue, getNumberTwo, currency } = useUtilsFunction();
   const { storeCustomizationSetting, globalSetting } = useGetSetting();
+const statusBgColor = {
+  Pending: "bg-yellow-100",
+  Cancel: "bg-red-100",
+  Processing: "bg-blue-100",
+  Delivered: "bg-green-100",
+};
+
+const statusTextColor = {
+  Pending: "text-yellow-600",
+  Cancel: "text-red-600",
+  Processing: "text-blue-600",
+  Delivered: "text-green-600",
+};
 
   return (
     <Layout title="Invoice" description="order confirmation page">
@@ -37,31 +50,34 @@ const Order = ({ params }) => {
         </h2>
       ) : (
         <div className="max-w-screen-2xl mx-auto py-10 px-3 sm:px-6">
-          <div className="bg-emerald-100 rounded-md mb-5 px-4 py-3">
-            <label>
+          <div
+            className={`${
+              statusBgColor[data?.status] || "bg-gray-100"
+            } rounded-md mb-5 px-4 py-3`}
+          >
+            <label
+              className={`font-medium ${
+                statusTextColor[data?.status] || "text-gray-700"
+              }`}
+            >
               {showingTranslateValue(
                 storeCustomizationSetting?.dashboard?.invoice_message_first
               )}{" "}
-              <span className="font-bold text-emerald-600">
-                {data?.user_info?.name},
-              </span>
-              {console.log("data status", data?.status)}
-              {`Your order  ${
+              <span className="font-bold">{data?.user_info?.name},</span>{" "}
+              {`Your order ${
                 data?.status === "Pending"
-                  ? "have been successfully placed !"
+                  ? "has been successfully placed!"
                   : data?.status === "Cancel"
-                  ? "have been Cancelled !"
+                  ? "has been Cancelled!"
                   : data?.status === "Processing"
-                  ? "is out for delivery !"
+                  ? "is out for delivery!"
                   : data?.status === "Delivered"
-                  ? "have been successfully Delivered !"
+                  ? "has been successfully Delivered!"
                   : data?.status
-              } `}
-              {/* {showingTranslateValue(
-                storeCustomizationSetting?.dashboard?.invoice_message_last
-              )} */}
+              }`}
             </label>
           </div>
+
           <div className="bg-white rounded-lg shadow-sm">
             <Invoice
               data={data}
