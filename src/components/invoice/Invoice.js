@@ -108,7 +108,7 @@ const Invoice = ({ data, printRef, globalSetting, currency }) => {
               {/* Invoice Number */}
               <div className="flex flex-col">
                 <span className="font-bold items-center font-serif text-sm uppercase text-gray-600 dark:text-gray-500">
-                  {"InvoiceNo"}
+                  {"Invoice No"}
                 </span>
                 <span className="text-sm text-gray-500 dark:text-gray-400">
                   #{data?.invoice}
@@ -117,7 +117,7 @@ const Invoice = ({ data, printRef, globalSetting, currency }) => {
             </div>
             <div className="flex flex-col mt-4 text-left">
               <span className="font-bold font-serif text-sm uppercase text-gray-600 block">
-                Ship To.
+                Ship To:
               </span>
               <span className="text-sm text-gray-500 block">
                 {data?.user_info?.name} <br />
