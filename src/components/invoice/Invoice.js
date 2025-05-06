@@ -43,7 +43,9 @@ const Invoice = ({ data, printRef, globalSetting, currency }) => {
             </div>
           </div>
           <div>
-            <h1 className="font-bold font-serif text-2xl mt-4 sm:mt-0 uppercase ">Invoice</h1>
+            <h1 className="font-bold font-serif text-2xl mt-4 sm:mt-0 uppercase ">
+              Invoice
+            </h1>
             {/* <h6 className="text-gray-700">
               Status :{" "}
               {data.status === "Delivered" && (
@@ -126,16 +128,24 @@ const Invoice = ({ data, printRef, globalSetting, currency }) => {
                 {data.user_info?.city}, {data.user_info?.state},{" "}
                 {data.user_info?.country},{data.user_info?.zipCode}
                 <br />
-                <strong>Landmark: </strong>
-                {data.user_info?.landmark}
-                {/* {console.log("user info", data.user_info)} */}
-                <br />
-                <strong>Email:</strong> {data?.user_info?.email}
-                <br />
-                <span className="">
-                  <strong>Phone:</strong>
-                  {data?.user_info?.contact}
-                </span>
+                {data?.user_info?.landmark && (
+                  <>
+                    <strong>Landmark: </strong>
+                    {data.user_info.landmark}
+                    <br />
+                  </>
+                )}
+                {data?.user_info?.email && (
+                  <>
+                    <strong>Email:</strong> {data.user_info.email}
+                    <br />
+                  </>
+                )}
+                {data?.user_info?.contact && (
+                  <span className="">
+                    <strong>Phone:</strong> {data.user_info.contact}
+                  </span>
+                )}
                 <br />
               </span>
             </div>
