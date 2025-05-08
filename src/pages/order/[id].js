@@ -39,11 +39,18 @@ const Order = ({ params }) => {
     Processing: "text-blue-600",
     Delivered: "text-green-600",
   };
+
   const returnStatus =
     data?.status === "Delivered" ||
     data?.status === "Returned" ||
     data?.status === "Return Rejected" ||
     data?.status === "Return Requested";
+  const returnButtonDisabled =
+    data?.status == "Returned" ||
+    data?.status == "Return Rejected" ||
+    data?.status === "Return Requested";
+
+  console.log("data", data);
   return (
     <Layout title="Invoice" description="order confirmation page">
       {isLoading ? (
@@ -83,14 +90,10 @@ const Order = ({ params }) => {
           </div>
           {/* return logic button here */}
           <div className="flex flex-row justify-end gap-3 ">
-            {/* 
-            {returnStatus && (
+            {/* {returnStatus && (
               <button
-                disabled={
-                  data?.status == "Returned" ||
-                  data?.status == "Return Rejected"
-                }
-                className={` p-3 cursor-pointer bg-blue-600 rounded-2xl text-white  hover:bg-blue-700`}
+                disabled={returnButtonDisabled}
+                className={` p-3 mb-3 cursor-pointer bg-blue-600 rounded-full text-white  hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed`}
               >
                 Return Order
               </button>
@@ -153,7 +156,7 @@ const Order = ({ params }) => {
                     <button className="mb-3 sm:mb-0 md:mb-0 lg:mb-0 flex items-center justify-center bg-emerald-500  text-white transition-all font-serif text-sm font-semibold h-10 py-2 px-5 rounded-md">
                       {/* {showingTranslateValue(
                         storeCustomizationSetting?.dashboard?.print_button
-                      )}{" "} */}
+                      )}*/}
                       Print / Download Invoice
                       <span className="ml-2">
                         <IoPrintOutline />
