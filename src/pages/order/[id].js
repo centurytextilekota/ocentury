@@ -26,20 +26,24 @@ const Order = ({ params }) => {
 
   const { showingTranslateValue, getNumberTwo, currency } = useUtilsFunction();
   const { storeCustomizationSetting, globalSetting } = useGetSetting();
-const statusBgColor = {
-  Pending: "bg-yellow-100",
-  Cancel: "bg-red-100",
-  Processing: "bg-blue-100",
-  Delivered: "bg-green-100",
-};
+  const statusBgColor = {
+    Pending: "bg-yellow-100",
+    Cancel: "bg-red-100",
+    Processing: "bg-blue-100",
+    Delivered: "bg-green-100",
+  };
 
-const statusTextColor = {
-  Pending: "text-yellow-600",
-  Cancel: "text-red-600",
-  Processing: "text-blue-600",
-  Delivered: "text-green-600",
-};
-
+  const statusTextColor = {
+    Pending: "text-yellow-600",
+    Cancel: "text-red-600",
+    Processing: "text-blue-600",
+    Delivered: "text-green-600",
+  };
+  const returnStatus =
+    data?.status === "Delivered" ||
+    data?.status === "Returned" ||
+    data?.status === "Return Rejected" ||
+    data?.status === "Return Requested";
   return (
     <Layout title="Invoice" description="order confirmation page">
       {isLoading ? (
@@ -76,6 +80,36 @@ const statusTextColor = {
                   : data?.status
               }`}
             </label>
+          </div>
+          {/* return logic button here */}
+          <div className="flex flex-row justify-end gap-3 ">
+            {/* 
+            {returnStatus && (
+              <button
+                disabled={
+                  data?.status == "Returned" ||
+                  data?.status == "Return Rejected"
+                }
+                className={` p-3 cursor-pointer bg-blue-600 rounded-2xl text-white  hover:bg-blue-700`}
+              >
+                Return Order
+              </button>
+            )} */}
+            {/* <button
+              disabled={
+                data?.status == "Returned" || data?.status == "Return Rejected"
+              }
+              className={`${
+                data?.status === "Delivered" ||
+                data?.status === "Returned" ||
+                data?.status === "Return Rejected" ||
+                data?.status === "Return Requested"
+                  ? "block"
+                  : "hidden"
+              } p-3 cursor-pointer bg-customPink rounded-2xl text-white  hover:bg-blue-700`}
+            >
+              cancel Order
+            </button> */}
           </div>
 
           <div className="bg-white rounded-lg shadow-sm">
