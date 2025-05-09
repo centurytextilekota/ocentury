@@ -43,14 +43,17 @@ const Order = ({ params }) => {
   const returnStatus =
     data?.status === "Delivered" ||
     data?.status === "Returned" ||
-    data?.status === "Return Rejected" ||
-    data?.status === "Return Requested";
-  const returnButtonDisabled =
+    data?.status === "ReturnRejected" ||
+    data?.status === "ReturnRequested";
+  const returnButtonDisabled = 
     data?.status == "Returned" ||
-    data?.status == "Return Rejected" ||
+    data?.status == "ReturnRejected" ||
     data?.status === "Return Requested";
-
-  console.log("data", data);
+    
+const handleReturnRequest = async () => {
+  // const success = await requestOrderReturn(order._id);
+};
+  console.log("invoice data", data);
   return (
     <Layout title="Invoice" description="order confirmation page">
       {isLoading ? (
@@ -92,6 +95,7 @@ const Order = ({ params }) => {
           <div className="flex flex-row justify-end gap-3 ">
             {/* {returnStatus && (
               <button
+                onClick={handleReturnRequest}
                 disabled={returnButtonDisabled}
                 className={` p-3 mb-3 cursor-pointer bg-blue-600 rounded-full text-white  hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed`}
               >
