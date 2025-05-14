@@ -14,6 +14,7 @@ import Loading from "@components/preloader/Loading";
 import OrderServices from "@services/OrderServices";
 import useUtilsFunction from "@hooks/useUtilsFunction";
 import InvoiceForDownload from "@components/invoice/InvoiceForDownload";
+import { notifyError, notifySuccess } from "@utils/toast";
 
 const Order = ({ params }) => {
   const printRef = useRef();
@@ -45,14 +46,18 @@ const Order = ({ params }) => {
     data?.status === "Returned" ||
     data?.status === "ReturnRejected" ||
     data?.status === "ReturnRequested";
-  const returnButtonDisabled = 
+  const returnButtonDisabled =
     data?.status == "Returned" ||
     data?.status == "ReturnRejected" ||
-    data?.status === "Return Requested";
-    
-const handleReturnRequest = async () => {
-  // const success = await requestOrderReturn(order._id);
-};
+    data?.status === "ReturnRequested";
+
+  const handleReturnRequest = async () => {
+    await OrderServices.ReturnOrder(data?._id)
+      .then((res) => {
+        notifySuccess(res.message);
+      })
+      .catch((err) => notifyError(err.message));
+  };
   console.log("invoice data", data);
   return (
     <Layout title="Invoice" description="order confirmation page">
@@ -87,13 +92,19 @@ const handleReturnRequest = async () => {
                   ? "is out for delivery!"
                   : data?.status === "Delivered"
                   ? "has been successfully Delivered!"
+                  : data?.status === "ReturnRequested"
+                  ? "Return Request has been successfully placed!"
+                  : data?.status === "ReturnRejected"
+                  ? "Unfortunately Return Request has been Rejected!"
+                  : data?.status === "Returned"
+                  ? "Return Request has been successfully Completed!"
                   : data?.status
               }`}
             </label>
           </div>
           {/* return logic button here */}
           <div className="flex flex-row justify-end gap-3 ">
-            {/* {returnStatus && (
+            {returnStatus && (
               <button
                 onClick={handleReturnRequest}
                 disabled={returnButtonDisabled}
@@ -101,7 +112,7 @@ const handleReturnRequest = async () => {
               >
                 Return Order
               </button>
-            )} */}
+            )}
             {/* <button
               disabled={
                 data?.status == "Returned" || data?.status == "Return Rejected"

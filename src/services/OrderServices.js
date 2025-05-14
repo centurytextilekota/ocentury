@@ -23,6 +23,9 @@ const OrderServices = {
   getOrderById: async (id, body) => {
     return requests.get(`/order/${id}`, body);
   },
+  ReturnOrder: async (id) => {
+    return requests.put(`/order/requestReturn/${id}`);
+  },
 
   //for sending email invoice to customer
   // sendEmailInvoiceToCustomer: async (body) => {
