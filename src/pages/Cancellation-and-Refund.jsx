@@ -103,7 +103,7 @@ const PrivacyPolicy = () => {
                 </li>
                 <li>
                   Approved refunds are processed back to the original payment
-                  method within <strong>7–10 business days</strong>.
+                  method within <strong>7 business days</strong>.
                 </li>
               </ul>
 
