@@ -15,6 +15,7 @@ import OrderServices from "@services/OrderServices";
 import useUtilsFunction from "@hooks/useUtilsFunction";
 import InvoiceForDownload from "@components/invoice/InvoiceForDownload";
 import { notifyError, notifySuccess } from "@utils/toast";
+import { useQueryClient } from "@tanstack/react-query";
 
 const Order = ({ params }) => {
   const printRef = useRef();
@@ -24,7 +25,7 @@ const Order = ({ params }) => {
     queryKey: ["order"],
     queryFn: async () => await OrderServices.getOrderById(orderId),
   });
-
+  const queryClient = useQueryClient();
   const { showingTranslateValue, getNumberTwo, currency } = useUtilsFunction();
   const { storeCustomizationSetting, globalSetting } = useGetSetting();
   const statusBgColor = {
@@ -55,6 +56,8 @@ const Order = ({ params }) => {
     await OrderServices.ReturnOrder(data?._id)
       .then((res) => {
         notifySuccess(res.message);
+        // Refetch the order data
+        queryClient.invalidateQueries(["order"]);
       })
       .catch((err) => notifyError(err.message));
   };
@@ -95,7 +98,7 @@ const Order = ({ params }) => {
                   : data?.status === "ReturnRequested"
                   ? "Return Request has been successfully placed!"
                   : data?.status === "ReturnRejected"
-                  ? "Unfortunately Return Request has been Rejected!"
+                  ? " Return Request has been Rejected!"
                   : data?.status === "Returned"
                   ? "Return Request has been successfully Completed!"
                   : data?.status
