@@ -33,7 +33,7 @@ const Order = ({ params }) => {
     Cancel: "bg-red-100",
     Processing: "bg-blue-100",
     Delivered: "bg-green-100",
-    ReturnRequested:"bg-blue-100",
+    ReturnRequested: "bg-blue-100",
     ReturnRejected: "bg-red-100",
     Returned: "bg-green-100",
   };
@@ -43,7 +43,7 @@ const Order = ({ params }) => {
     Cancel: "text-red-600",
     Processing: "text-blue-600",
     Delivered: "text-green-600",
-    ReturnRequested:"bg-blue-100",
+    ReturnRequested: "bg-blue-100",
     ReturnRejected: "text-red-600",
     Returned: "text-green-600",
   };
@@ -54,6 +54,7 @@ const Order = ({ params }) => {
     data?.status === "ReturnRejected" ||
     data?.status === "ReturnRequested";
   const returnButtonDisabled =
+    isSevenDaysPassed ||
     data?.status == "Returned" ||
     data?.status == "ReturnRejected" ||
     data?.status === "ReturnRequested";
@@ -67,7 +68,22 @@ const Order = ({ params }) => {
       })
       .catch((err) => notifyError(err.message));
   };
+
+  const isSevenDaysPassed = () => {
+    if (!data?.deliveryDate) {
+      return false;
+    }
+    const currentDate = new Date();
+    const deliveryDate = new Date(data?.deliveryDate);
+
+    // diff in days
+    const diffINTime = currentDate.getTime() - deliveryDate.getTime();
+    const diffInDays = diffINTime / (1000 * 3600 * 24);
+    return diffInDays > 7;
+  };
+
   console.log("invoice data", data);
+
   return (
     <Layout title="Invoice" description="order confirmation page">
       {isLoading ? (
