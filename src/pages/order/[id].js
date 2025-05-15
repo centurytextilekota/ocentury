@@ -47,11 +47,12 @@ const Order = ({ params }) => {
     ReturnRejected: "text-red-600",
     Returned: "text-green-600",
   };
-  
+
   const isSevenDaysPassed = () => {
     if (!data?.deliveryDate) {
       return false;
     }
+    console.log("Return button clicked"); 
     const currentDate = new Date();
     const deliveryDate = new Date(data?.deliveryDate);
 
@@ -66,7 +67,7 @@ const Order = ({ params }) => {
     data?.status === "ReturnRejected" ||
     data?.status === "ReturnRequested";
   const returnButtonDisabled =
-    isSevenDaysPassed ||
+    isSevenDaysPassed() ||
     data?.status == "Returned" ||
     data?.status == "ReturnRejected" ||
     data?.status === "ReturnRequested";
