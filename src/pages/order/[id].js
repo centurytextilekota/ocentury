@@ -47,7 +47,19 @@ const Order = ({ params }) => {
     ReturnRejected: "text-red-600",
     Returned: "text-green-600",
   };
+  
+  const isSevenDaysPassed = () => {
+    if (!data?.deliveryDate) {
+      return false;
+    }
+    const currentDate = new Date();
+    const deliveryDate = new Date(data?.deliveryDate);
 
+    // diff in days
+    const diffINTime = currentDate.getTime() - deliveryDate.getTime();
+    const diffInDays = diffINTime / (1000 * 3600 * 24);
+    return diffInDays > 7;
+  };
   const returnStatus =
     data?.status === "Delivered" ||
     data?.status === "Returned" ||
@@ -69,18 +81,7 @@ const Order = ({ params }) => {
       .catch((err) => notifyError(err.message));
   };
 
-  const isSevenDaysPassed = () => {
-    if (!data?.deliveryDate) {
-      return false;
-    }
-    const currentDate = new Date();
-    const deliveryDate = new Date(data?.deliveryDate);
 
-    // diff in days
-    const diffINTime = currentDate.getTime() - deliveryDate.getTime();
-    const diffInDays = diffINTime / (1000 * 3600 * 24);
-    return diffInDays > 7;
-  };
 
   console.log("invoice data", data);
 
