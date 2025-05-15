@@ -33,6 +33,9 @@ const Order = ({ params }) => {
     Cancel: "bg-red-100",
     Processing: "bg-blue-100",
     Delivered: "bg-green-100",
+    ReturnRequested:"bg-blue-100",
+    ReturnRejected: "bg-red-100",
+    Returned: "bg-green-100",
   };
 
   const statusTextColor = {
@@ -40,6 +43,9 @@ const Order = ({ params }) => {
     Cancel: "text-red-600",
     Processing: "text-blue-600",
     Delivered: "text-green-600",
+    ReturnRequested:"bg-blue-100",
+    ReturnRejected: "text-red-600",
+    Returned: "text-green-600",
   };
 
   const returnStatus =
@@ -100,7 +106,7 @@ const Order = ({ params }) => {
                   : data?.status === "ReturnRejected"
                   ? " Return Request has been Rejected!"
                   : data?.status === "Returned"
-                  ? "Return Request has been successfully Completed!"
+                  ? "Return has been successfully Completed!"
                   : data?.status
               }`}
             </label>
