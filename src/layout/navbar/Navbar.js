@@ -72,14 +72,16 @@ const Navbar = () => {
                 </button>
               </div>
               <div className="w-24 sm:w-28 mx-auto flex items-center justify-center">
-                <img
-                  width={60}
-                  height={60}
-                  className="w-full h-auto "
-                  priority
-                  src="/logo/gray-logo.png"
-                  alt="logo"
-                />
+                <Link href="/">
+                  <img
+                    width={60}
+                    height={60}
+                    className="w-full h-auto "
+                    priority
+                    src="/logo/gray-logo.png"
+                    alt="logo"
+                  />
+                </Link>
               </div>
               {/* <MobileFooter/> */}
               {/* Icons Section - Right */}
@@ -155,35 +157,35 @@ const Navbar = () => {
             </Link>
           )}
           {/* {storeCustomizationSetting?.navbar?.categories_menu_status && ( */}
-            <Popover className="relative">
-              <Popover.Button className="font-montserrat group inline-flex items-center text-[#192A56] hover:text-black-200 text-lg font-medium focus:outline-none  after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full">
-                <span>
-                  {showingTranslateValue(
-                    storeCustomizationSetting?.navbar?.categories
-                  )}
-                </span>
-                <ChevronDownIcon
-                  className="ml-1 h-3 w-3 group-hover:text-black-200"
-                  aria-hidden="true"
-                />
-              </Popover.Button>
+          <Popover className="relative">
+            <Popover.Button className="font-montserrat group inline-flex items-center text-[#192A56] hover:text-black-200 text-lg font-medium focus:outline-none  after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full">
+              <span>
+                {showingTranslateValue(
+                  storeCustomizationSetting?.navbar?.categories
+                )}
+              </span>
+              <ChevronDownIcon
+                className="ml-1 h-3 w-3 group-hover:text-black-200"
+                aria-hidden="true"
+              />
+            </Popover.Button>
 
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-200"
-                enterFrom="opacity-0 translate-y-1"
-                enterTo="opacity-100 translate-y-0"
-                leave="transition ease-in duration-150"
-                leaveFrom="opacity-100 translate-y-0"
-                leaveTo="opacity-0 translate-y-1"
-              >
-                <Popover.Panel className="absolute z-10 -ml-1 mt-1 transform w-screen max-w-xs c-h-65vh bg-white">
-                  <div className="font-montserrat rounded-md shadow-lg ring-1 ring-black ring-opacity-5 overflow-y-scroll flex-grow scrollbar-hide w-full h-full">
-                    <Category />
-                  </div>
-                </Popover.Panel>
-              </Transition>
-            </Popover>
+            <Transition
+              as={Fragment}
+              enter="transition ease-out duration-200"
+              enterFrom="opacity-0 translate-y-1"
+              enterTo="opacity-100 translate-y-0"
+              leave="transition ease-in duration-150"
+              leaveFrom="opacity-100 translate-y-0"
+              leaveTo="opacity-0 translate-y-1"
+            >
+              <Popover.Panel className="absolute z-10 -ml-1 mt-1 transform w-screen max-w-xs c-h-65vh bg-white">
+                <div className="font-montserrat rounded-md shadow-lg ring-1 ring-black ring-opacity-5 overflow-y-scroll flex-grow scrollbar-hide w-full h-full">
+                  <Category />
+                </div>
+              </Popover.Panel>
+            </Transition>
+          </Popover>
           {/* )} */}
           {storeCustomizationSetting?.navbar?.contact_menu_status && (
             <Link
