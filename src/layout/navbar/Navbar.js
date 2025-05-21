@@ -154,7 +154,7 @@ const Navbar = () => {
               )}
             </Link>
           )}
-          {storeCustomizationSetting?.navbar?.categories_menu_status && (
+          {/* {storeCustomizationSetting?.navbar?.categories_menu_status && ( */}
             <Popover className="relative">
               <Popover.Button className="font-montserrat group inline-flex items-center text-[#192A56] hover:text-black-200 text-lg font-medium focus:outline-none  after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full">
                 <span>
@@ -184,7 +184,7 @@ const Navbar = () => {
                 </Popover.Panel>
               </Transition>
             </Popover>
-          )}
+          {/* )} */}
           {storeCustomizationSetting?.navbar?.contact_menu_status && (
             <Link
               href="/contact-us"
