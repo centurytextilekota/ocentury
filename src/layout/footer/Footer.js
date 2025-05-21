@@ -26,9 +26,9 @@ const Footer = () => {
   return (
     <div className="pb-16 lg:pb-0 xl:pb-0 bg-white">
       <div className="mx-auto max-w-screen-2xl px-4 sm:px-10">
-        <div className="grid grid-cols-2 md:grid-cols-7 xl:grid-cols-12 gap-5 sm:gap-9 lg:gap-11 xl:gap-7 py-10 lg:py-16 justify-between">
+        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 py-10 lg:py-16">
           {storeCustomizationSetting?.footer?.block1_status && (
-            <div className="pb-3.5 sm:pb-0 col-span-1 md:col-span-2 lg:col-span-3">
+            <div className="pb-3.5 sm:pb-0">
               <h3 className="text-md lg:leading-7 font-medium mb-4 sm:mb-5 lg:mb-6 pb-0.5">
                 <CMSkeleton
                   count={1}
@@ -104,8 +104,10 @@ const Footer = () => {
               </ul>
             </div>
           )}
-          {storeCustomizationSetting?.footer?.block2_status && (
-            <div className="pb-3.5 sm:pb-0 col-span-1 md:col-span-2 lg:col-span-3">
+
+          {/* Uncomment this section if you want it to appear */}
+          {/* {storeCustomizationSetting?.footer?.block2_status && (
+            <div className="pb-3.5 sm:pb-0">
               <h3 className="text-md lg:leading-7 font-medium mb-4 sm:mb-5 lg:mb-6 pb-0.5">
                 <CMSkeleton
                   count={1}
@@ -114,7 +116,7 @@ const Footer = () => {
                   data={storeCustomizationSetting?.footer?.block2_title}
                 />
               </h3>
-              <ul className="text-sm lg:text-15px flex flex-col space-y-3">
+              <ul className="text-sm flex flex-col space-y-3">
                 <li className="flex items-baseline">
                   <Link
                     href={`${storeCustomizationSetting?.footer?.block2_sub_link1}`}
@@ -178,9 +180,10 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-          )}
+          )} */}
+
           {storeCustomizationSetting?.footer?.block3_status && (
-            <div className="pb-3.5 sm:pb-0 col-span-1 md:col-span-2 lg:col-span-3">
+            <div className="pb-3.5 sm:pb-0">
               <h3 className="text-md lg:leading-7 font-medium mb-4 sm:mb-5 lg:mb-6 pb-0.5">
                 <CMSkeleton
                   count={1}
@@ -189,7 +192,7 @@ const Footer = () => {
                   data={storeCustomizationSetting?.footer?.block3_title}
                 />
               </h3>
-              <ul className="text-sm lg:text-15px flex flex-col space-y-3">
+              <ul className="text-sm flex flex-col space-y-3">
                 <li className="flex items-baseline">
                   <Link
                     href={`${
@@ -269,18 +272,12 @@ const Footer = () => {
               </ul>
             </div>
           )}
+
           {storeCustomizationSetting?.footer?.block4_status && (
-            <div className="pb-3.5 sm:pb-0 col-span-1 md:col-span-2 lg:col-span-3">
-              {/* <Link
-                href="/"
-                className="mr-3 lg:mr-12 xl:mr-12"
-                rel="noreferrer"
-              > */}
-              <div className="mr-3 pb-3 lg:mr-12 xl:mr-12">
-                <div className="relative w-16 h-10">
+            <div className="pb-3.5 sm:pb-0 lg:text-right ml-auto">
+              <div className=" pb-3">
+                <div className="relative w-16 h-10 mb-2 pr-0 lg:ml-auto">
                   <Image
-                    // width={110}
-                    // height={40}
                     width="0"
                     height="0"
                     sizes="100vw"
@@ -290,8 +287,7 @@ const Footer = () => {
                   />
                 </div>
               </div>
-              {/* </Link> */}
-              <p className="leading-7 font-sans text-sm text-gray-600 mt-3">
+              <p className="leading-7 font-sans text-sm text-gray-600 mt-3  max-w-[300px] break-words">
                 <CMSkeleton
                   count={1}
                   height={10}
