@@ -39,10 +39,10 @@ const WhyChooseUs = () => {
           {/* Card 3 */}
           <div data-aos="fade-up" className="flex flex-col">
             <h2 className="flex gap-4 items-center text-xl sm:text-2xl md:text-[2rem] text-gray-900">
-              <RiCustomerServiceLine /> 24/7 Support
+              <RiCustomerServiceLine /> Support Hours
             </h2>
             <p className="text-base sm:text-lg text-gray-600 sm:ml-14">
-              Get 24x7 Assistance on All Things Shopping!
+              11:00 AM – 9:00 PM, Delivering Quality Service Daily.
             </p>
           </div>
 
