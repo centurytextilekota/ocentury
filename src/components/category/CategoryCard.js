@@ -24,31 +24,44 @@ const CategoryCard = ({ title, icon, nested, id }) => {
     show: false,
   });
 
-  // handle show category
+  // handle show category - modified to handle subcategories properly
   const showCategory = (id, categoryName) => {
     const name = categoryName.toLowerCase().replace(/[^A-Z0-9]+/gi, "-");
 
-    setShow(!show);
-    router.push(`/search?category=${name}&_id=${id}`);
-    closeCategoryDrawer;
-    setIsLoading(!isLoading);
+    // If there are nested categories, just toggle the display
+    if (nested && nested.length > 0) {
+      setShow(!show);
+    } else {
+      // If no nested categories, route to search page
+      router.push(`/search?category=${name}&_id=${id}`);
+      closeCategoryDrawer();
+      setIsLoading(!isLoading);
+    }
   };
 
   // handle sub nested category
-  const handleSubNestedCategory = (id, categoryName) => {
+  const handleSubNestedCategory = (id, categoryName, hasChildren) => {
     const name = categoryName.toLowerCase().replace(/[^A-Z0-9]+/gi, "-");
 
-    setShowSubCategory({ id: id, show: showSubCategory.show ? false : true });
-    router.push(`/search?category=${name}&_id=${id}`);
-    closeCategoryDrawer;
-    setIsLoading(!isLoading);
+    // If there are nested categories, just toggle the display
+    if (hasChildren && hasChildren.length > 0) {
+      setShowSubCategory({
+        id: id,
+        show: showSubCategory.id === id ? !showSubCategory.show : true,
+      });
+    } else {
+      // If no nested categories, route to search page
+      router.push(`/search?category=${name}&_id=${id}`);
+      closeCategoryDrawer();
+      setIsLoading(!isLoading);
+    }
   };
 
   const handleSubCategory = (id, categoryName) => {
     const name = categoryName.toLowerCase().replace(/[^A-Z0-9]+/gi, "-");
 
     router.push(`/search?category=${name}&_id=${id}`);
-    closeCategoryDrawer;
+    closeCategoryDrawer();
     setIsLoading(!isLoading);
   };
 
@@ -88,7 +101,8 @@ const CategoryCard = ({ title, icon, nested, id }) => {
                   onClick={() =>
                     handleSubNestedCategory(
                       children._id,
-                      showingTranslateValue(children.name)
+                      showingTranslateValue(children.name),
+                      children.children
                     )
                   }
                   className="flex items-center font-serif pr-2 text-sm text-gray-600 hover:text-customPink py-1 cursor-pointer"
