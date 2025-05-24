@@ -96,6 +96,7 @@ const MainCarousel = () => {
         {sliderData?.map((item, i) => (
           <SwiperSlide className="w-full relative overflow-hidden" key={i + 1}>
             {/* Updated image container with better aspect ratio handling */}
+            {/* <div className="relative w-full aspect-[16/9] sm:aspect-[16/8] md:aspect-[16/7] lg:aspect-[16/9]"> */}
             <div className="relative w-full aspect-[16/9] sm:aspect-[16/8] md:aspect-[16/7] lg:aspect-[16/9]">
               {/* <Image
                 src={item.image || "/slider/slider-1.jpg"}
@@ -107,13 +108,12 @@ const MainCarousel = () => {
                 quality={100}
                 loading="eager"
               /> */}
-              <Image
+              <img
                 src={item.image || "/slider/slider-1.jpg"}
                 alt={item.title || "Slider Image"}
-                fill
-                className="object-contain object-center"
-                sizes="100vw"
+                className="absolute inset-0 w-full h-full object-contain object-center"
                 loading="eager"
+                style={{ imageRendering: "auto" }} // optional: for controlling rendering
               />
             </div>
 
