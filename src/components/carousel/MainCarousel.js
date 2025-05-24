@@ -111,14 +111,14 @@ const MainCarousel = () => {
               <img
                 src={item.image || "/slider/slider-1.jpg"}
                 alt={item.title || "Slider Image"}
-                className="absolute inset-0 w-full h-full object-contain object-center"
+                className="absolute inset-0 w-full h-full z-10  object-contain object-center"
                 loading="eager"
                 style={{ imageRendering: "auto" }} // optional: for controlling rendering
               />
             </div>
 
             {/* Updated overlay positioning */}
-            <div className="absolute inset-0 z-10 flex flex-col justify-center bg-black/20">
+            {/* <div className="absolute inset-0 z-10 flex flex-col justify-center bg-black/20">
               <div className="px-4 sm:px-10 md:px-16 w-full sm:w-10/12 md:w-8/12 lg:w-7/12">
                 <h1 className="mb-2 font-serif text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white drop-shadow-lg">
                   {item.title}
@@ -127,7 +127,7 @@ const MainCarousel = () => {
                   {item.info}
                 </p>
               </div>
-            </div>
+            </div> */}
           </SwiperSlide>
         ))}
       </Swiper>
