@@ -97,7 +97,7 @@ const MainCarousel = () => {
           <SwiperSlide className="w-full relative overflow-hidden" key={i + 1}>
             {/* Updated image container with better aspect ratio handling */}
             <div className="relative w-full aspect-[16/9] sm:aspect-[16/8] md:aspect-[16/7] lg:aspect-[16/9]">
-              <Image
+              {/* <Image
                 src={item.image || "/slider/slider-1.jpg"}
                 alt={item.title || "Slider Image"}
                 fill
@@ -105,6 +105,14 @@ const MainCarousel = () => {
                 priority
                 sizes="100vw"
                 quality={100}
+                loading="eager"
+              /> */}
+              <Image
+                src={item.image || "/slider/slider-1.jpg"}
+                alt={item.title || "Slider Image"}
+                fill
+                className="object-contain object-center"
+                sizes="100vw"
                 loading="eager"
               />
             </div>
