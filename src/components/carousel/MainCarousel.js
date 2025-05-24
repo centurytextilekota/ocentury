@@ -104,7 +104,7 @@ const MainCarousel = () => {
                 className="object-cover object-center" // Added object-center for better positioning
                 priority
                 sizes="100vw"
-                quality={85}
+                quality={100}
                 loading="eager"
               />
             </div>
