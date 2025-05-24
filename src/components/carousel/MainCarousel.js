@@ -111,7 +111,7 @@ const MainCarousel = () => {
               <img
                 src={item.image || "/slider/slider-1.jpg"}
                 alt={item.title || "Slider Image"}
-                className="absolute inset-0 w-full h-full z-10  object-contain object-center"
+                className="absolute inset-0 w-full h-full z-10  object-cover object-center"
                 loading="eager"
                 style={{ imageRendering: "auto" }} // optional: for controlling rendering
               />
