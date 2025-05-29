@@ -32,7 +32,7 @@ const Order = ({ params }) => {
     Pending: "bg-yellow-100",
     Cancel: "bg-red-100",
     Processing: "bg-blue-100",
-    Shipped:"bg-blue-100",
+    Shipped: "bg-blue-100",
     Delivered: "bg-green-100",
     ReturnRequested: "bg-blue-100",
     ReturnRejected: "bg-red-100",
@@ -54,7 +54,7 @@ const Order = ({ params }) => {
     if (!data?.deliveryDate) {
       return false;
     }
-    console.log("Return button clicked"); 
+    console.log("Return button clicked");
     const currentDate = new Date();
     const deliveryDate = new Date(data?.deliveryDate);
 
@@ -69,7 +69,7 @@ const Order = ({ params }) => {
     data?.status === "ReturnRejected" ||
     data?.status === "ReturnRequested";
   const returnButtonDisabled =
-    isSevenDaysPassed() ||
+    // isSevenDaysPassed() ||
     data?.status == "Returned" ||
     data?.status == "ReturnRejected" ||
     data?.status === "ReturnRequested";
@@ -81,10 +81,11 @@ const Order = ({ params }) => {
         // Refetch the order data
         queryClient.invalidateQueries(["order"]);
       })
-      .catch((err) => notifyError(err.message));
+      .catch((err) => {
+        notifyError(err?.response?.data?.message || "Error while requesting return!");
+        console.log("Error while requesting return:", err?.response?.data?.message);
+      });
   };
-
-
 
   console.log("invoice data", data);
 
