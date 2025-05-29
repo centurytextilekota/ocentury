@@ -31,6 +31,9 @@ const OrderHistory = ({ order, currency }) => {
         {order.status === "Processing" && (
           <span className="text-indigo-500">{order.status}</span>
         )}
+        {order.status === "Shipped" && (
+          <span className="text-indigo-500">{order.status}</span>
+        )}
         {order.status === "ReturnRequested" && (
           <span className="text-blue-500">{order.status}</span>
         )}

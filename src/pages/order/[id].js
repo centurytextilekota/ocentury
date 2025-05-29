@@ -32,6 +32,7 @@ const Order = ({ params }) => {
     Pending: "bg-yellow-100",
     Cancel: "bg-red-100",
     Processing: "bg-blue-100",
+    Shipped:"bg-blue-100",
     Delivered: "bg-green-100",
     ReturnRequested: "bg-blue-100",
     ReturnRejected: "bg-red-100",
@@ -42,6 +43,7 @@ const Order = ({ params }) => {
     Pending: "text-yellow-600",
     Cancel: "text-red-600",
     Processing: "text-blue-600",
+    Shipped: "text-blue-600",
     Delivered: "text-green-600",
     ReturnRequested: "bg-blue-100",
     ReturnRejected: "text-red-600",
@@ -116,7 +118,9 @@ const Order = ({ params }) => {
                   : data?.status === "Cancel"
                   ? "has been Cancelled!"
                   : data?.status === "Processing"
-                  ? "is out for delivery!"
+                  ? "is being processed!"
+                  : data?.status === "Shipped"
+                  ? "has been successfully out for delivery!"
                   : data?.status === "Delivered"
                   ? "has been successfully Delivered!"
                   : data?.status === "ReturnRequested"

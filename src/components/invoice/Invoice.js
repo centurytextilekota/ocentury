@@ -101,6 +101,19 @@ const Invoice = ({ data, printRef, globalSetting, currency }) => {
                   {data.status === "Processing" && (
                     <span className="text-indigo-500">{data.status}</span>
                   )}
+                  {data.status === "Shipped" && (
+                    <span className="text-indigo-500">{data.status}</span>
+                  )}
+                  {data.status === "ReturnRequested" && (
+                    <span className="text-orange-500">Return</span>
+                  )}
+                  {data.status === "ReturnRejected" && (
+                    <span className="text-red-500">Return Rejected</span>
+                  )}
+                  {data.status === "Returned" && (
+                    <span className="text-emerald-500">Returned</span>
+                  )}
+
                   {data.status === "Deleted" && (
                     <span className="text-red-700">{data.status}</span>
                   )}
@@ -126,7 +139,9 @@ const Invoice = ({ data, printRef, globalSetting, currency }) => {
                 {data?.user_info?.address}
                 <br />
                 {data.user_info?.city}, {data.user_info?.state},{" "}
-                {data.user_info?.country}{". "}{data.user_info?.zipCode}
+                {data.user_info?.country}
+                {". "}
+                {data.user_info?.zipCode}
                 <br />
                 {data?.user_info?.landmark && (
                   <>
