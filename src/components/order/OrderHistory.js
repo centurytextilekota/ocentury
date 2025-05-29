@@ -35,10 +35,10 @@ const OrderHistory = ({ order, currency }) => {
           <span className="text-indigo-500">{order.status}</span>
         )}
         {order.status === "ReturnRequested" && (
-          <span className="text-blue-500">{order.status}</span>
+          <span className="text-orange-700">Return Requested</span>
         )}
         {order.status === "ReturnRejected" && (
-          <span className="text-red-500">{order.status}</span>
+          <span className="text-red-500">Return Rejected</span>
         )}
         {order.status === "Returned" && (
           <span className="text-green-500">{order.status}</span>

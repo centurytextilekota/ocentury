@@ -105,13 +105,13 @@ const Invoice = ({ data, printRef, globalSetting, currency }) => {
                     <span className="text-indigo-500">{data.status}</span>
                   )}
                   {data.status === "ReturnRequested" && (
-                    <span className="text-orange-500">Return</span>
+                    <span className="text-orange-500">Return Requested</span>
                   )}
                   {data.status === "ReturnRejected" && (
                     <span className="text-red-500">Return Rejected</span>
                   )}
                   {data.status === "Returned" && (
-                    <span className="text-emerald-500">Returned</span>
+                    <span className="text-indigo-500">Returned</span>
                   )}
 
                   {data.status === "Deleted" && (
