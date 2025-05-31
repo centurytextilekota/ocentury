@@ -35,7 +35,8 @@ import ProductServices from "@services/ProductServices";
 import useUtilsFunction from "@hooks/useUtilsFunction";
 import Discount from "@components/common/Discount";
 import ImageCarousel from "@components/carousel/ImageCarousel";
-
+import InnerImageZoom from "react-inner-image-zoom";
+import "react-inner-image-zoom/lib/styles.min.css";
 const ProductScreen = ({ product, attributes, relatedProducts }) => {
   const router = useRouter();
 
@@ -279,13 +280,14 @@ const ProductScreen = ({ product, attributes, relatedProducts }) => {
                     <Discount slug product={product} discount={discount} />
 
                     {product.image[0] ? (
-                      <Image
-                        src={img || product.image[0]}
-                        alt="product"
-                        width={650}
-                        height={650}
-                        priority
-                      />
+                      // <Image
+                      //   src={img || product.image[0]}
+                      //   alt="product"
+                      //   width={650}
+                      //   height={650}
+                      //   priority
+                      // />
+                      <InnerImageZoom src={img || product.image[0]} />
                     ) : (
                       <Image
                         src="https://res.cloudinary.com/ahossain/image/upload/v1655097002/placeholder_kvepfp.png"
