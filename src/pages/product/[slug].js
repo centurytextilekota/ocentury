@@ -280,14 +280,14 @@ const ProductScreen = ({ product, attributes, relatedProducts }) => {
                     <Discount slug product={product} discount={discount} />
 
                     {product.image[0] ? (
-                      // <Image
-                      //   src={img || product.image[0]}
-                      //   alt="product"
-                      //   width={650}
-                      //   height={650}
-                      //   priority
-                      // />
-                      <InnerImageZoom src={img || product.image[0]} />
+                      <Image
+                        src={img || product.image[0]}
+                        alt="product"
+                        width={650}
+                        height={650}
+                        priority
+                      />
+                      // <InnerImageZoom src={img || product.image[0]} />
                     ) : (
                       <Image
                         src="https://res.cloudinary.com/ahossain/image/upload/v1655097002/placeholder_kvepfp.png"
