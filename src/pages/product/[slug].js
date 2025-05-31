@@ -35,8 +35,8 @@ import ProductServices from "@services/ProductServices";
 import useUtilsFunction from "@hooks/useUtilsFunction";
 import Discount from "@components/common/Discount";
 import ImageCarousel from "@components/carousel/ImageCarousel";
-import InnerImageZoom from "react-inner-image-zoom";
-import "react-inner-image-zoom/lib/styles.min.css";
+// import InnerImageZoom from "react-inner-image-zoom";
+// import "react-inner-image-zoom/lib/styles.min.css";
 const ProductScreen = ({ product, attributes, relatedProducts }) => {
   const router = useRouter();
 
