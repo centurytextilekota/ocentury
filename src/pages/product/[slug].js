@@ -1,3 +1,4 @@
+"use client";
 import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
 import Link from "next/link";
@@ -35,7 +36,13 @@ import ProductServices from "@services/ProductServices";
 import useUtilsFunction from "@hooks/useUtilsFunction";
 import Discount from "@components/common/Discount";
 import ImageCarousel from "@components/carousel/ImageCarousel";
-import InnerImageZoom from "react-inner-image-zoom";
+// at the top of your file
+import dynamic from "next/dynamic";
+
+const InnerImageZoom = dynamic(() => import('react-inner-image-zoom'), {
+  ssr: false,
+});
+
 import "react-inner-image-zoom/lib/styles.min.css";
 const ProductScreen = ({ product, attributes, relatedProducts }) => {
   const router = useRouter();
