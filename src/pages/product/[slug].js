@@ -288,8 +288,12 @@ const ProductScreen = ({ product, attributes, relatedProducts }) => {
                       //   priority
                       // />
                       <InnerImageZoom
-                        src={img || product.image[0]}
-                        zoomSrc={img || product.image[0]}
+                        src={img || product?.image[0]}
+                        zoomSrc={
+                          img ||
+                          product?.image[0] ||
+                          "https://placeholder.com/placeholder.jpg"
+                        }
                         alt="product"
                         zoomType="hover"
                         zoomPreload={true}
