@@ -32,7 +32,7 @@ const CategoryCarousel = () => {
     queryKey: ["category"],
     queryFn: async () => await CategoryServices.getShowingCategory(),
   });
-
+  console.log("category", data);
   // console.log("data", data, "error", error, "isFetched", isFetched);
 
   const handleCategoryClick = (id, category) => {
