@@ -1,6 +1,7 @@
+"use client"
 import Image from "next/image";
 import { useRouter } from "next/router";
-import React, { useContext, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { IoChevronBackOutline, IoChevronForward } from "react-icons/io5";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -15,7 +16,9 @@ import CategoryServices from "@services/CategoryServices";
 import useUtilsFunction from "@hooks/useUtilsFunction";
 import Loading from "@components/preloader/Loading";
 
+// Inside CategoryCarousel component
 const CategoryCarousel = () => {
+  const swiperRef = useRef(null);
   const router = useRouter();
 
   const prevRef = useRef(null);
@@ -32,7 +35,18 @@ const CategoryCarousel = () => {
     queryKey: ["category"],
     queryFn: async () => await CategoryServices.getShowingCategory(),
   });
-  console.log("category", data);
+  // useEffect(() => {
+  //   if (swiperRef.current && data?.length > 0) {
+  //     // Add a small delay to ensure DOM is updated
+  //     const timer = setTimeout(() => {
+  //       swiperRef.current.update();
+  //       swiperRef.current.slideTo(0, 0);
+  //     }, 100);
+
+  //     return () => clearTimeout(timer);
+  //   }
+  // }, [data]);
+  
   // console.log("data", data, "error", error, "isFetched", isFetched);
 
   const handleCategoryClick = (id, category) => {
@@ -45,9 +59,10 @@ const CategoryCarousel = () => {
   };
 
   return (
-    <>
+    <div>
       <Swiper
         onInit={(swiper) => {
+          // swiperRef.current = swiper;
           swiper.params.navigation.prevEl = prevRef.current;
           swiper.params.navigation.nextEl = nextRef.current;
           swiper.navigation.init();
@@ -60,7 +75,8 @@ const CategoryCarousel = () => {
         spaceBetween={8}
         navigation={true}
         allowTouchMove={false}
-        loop={true}
+        loop={data?.length > 0} // Only enable loop when we have data
+        loopAdditionalSlides={2}
         breakpoints={{
           // when window width is >= 640px
           375: {
@@ -138,7 +154,7 @@ const CategoryCarousel = () => {
                     </div>
                   </div>
 
-                  <h3 className="text-xs text-gray-600 mt-2 font-serif group-hover:text-customPink">
+                  <h3 className="text-xs text-gray-600 mt-2 font-serif group-hover:text-emerald-500">
                     {showingTranslateValue(category?.name)}
                   </h3>
                 </div>
@@ -153,7 +169,7 @@ const CategoryCarousel = () => {
           <IoChevronForward />
         </button>
       </Swiper>
-    </>
+    </div>
   );
 };
 
