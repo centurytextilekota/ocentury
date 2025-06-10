@@ -25,8 +25,8 @@ const Footer = () => {
 
   return (
     <div className="pb-16 lg:pb-0 xl:pb-0 bg-white">
-      <div className="mx-auto max-w-screen-2xl px-4 sm:px-10">
-        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 py-10 lg:py-16">
+      <div className="mx-auto max-w-screen-lg px-4 sm:px-10">
+        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 py-10 lg:py-16 ">
           {storeCustomizationSetting?.footer?.block1_status && (
             <div className="pb-3.5 sm:pb-0">
               <h3 className="text-md lg:leading-7 font-medium mb-4 sm:mb-5 lg:mb-6 pb-0.5">
@@ -274,9 +274,11 @@ const Footer = () => {
           )}
 
           {storeCustomizationSetting?.footer?.block4_status && (
-            <div className="pb-3.5 sm:pb-0 lg:text-right ml-auto">
+            <div className="pb-3.5 sm:pb-0 lg:text-center ">
+              {/* ml-auto lg:text-right*/}
               <div className=" pb-3">
-                <div className="relative w-16 h-10 mb-2 pr-0 lg:ml-auto">
+                <div className="relative w-16 h-10 mb-2 mx-auto">
+                  {/* lg:ml-auto pr-0 */}
                   <Image
                     width="0"
                     height="0"
