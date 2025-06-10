@@ -12,8 +12,9 @@ const OrderTable = ({ data, currency }) => {
           <th className="px-6 py-1 whitespace-nowrap font-normal text-gray-500 text-left">
             {i + 1}{" "}
           </th>
-          <td className="px-6 py-1 whitespace-nowrap font-normal text-gray-500">
-            {item.title}
+          <td className="px-6 py-1 whitespace-nowrap font-normal text-gray-500 flex flex-col">
+            <strong > {item.title}</strong>
+            <div> (sku: {item.sku})</div>
           </td>
           <td className="px-6 py-1 whitespace-nowrap font-bold text-center">
             {item.quantity}{" "}
