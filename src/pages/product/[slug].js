@@ -1,4 +1,3 @@
-"use client";
 import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
 import Link from "next/link";
