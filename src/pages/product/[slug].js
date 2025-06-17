@@ -314,7 +314,7 @@ const ProductScreen = ({ product, attributes, relatedProducts }) => {
                     )}
 
                     {product?.image?.length > 1 && (
-                      <div className="flex flex-row flex-wrap mt-4 border-t">
+                      <div className="flex flex-row flex-wrap my-4 border-t">
                         <ImageCarousel
                           images={product.image}
                           handleChangeImage={handleChangeImage}
